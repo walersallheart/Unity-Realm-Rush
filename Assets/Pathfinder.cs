@@ -8,6 +8,10 @@ public class Pathfinder : MonoBehaviour {
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
 
+    Queue<Waypoint> queue = new Queue<Waypoint>();
+
+    bool isRunning = true;
+
     Vector2Int[] directions = {
         Vector2Int.right,
         Vector2Int.up,
@@ -19,7 +23,32 @@ public class Pathfinder : MonoBehaviour {
 	void Start () {
         LoadBlocks();
         ColorStartAndEnd();
-        ExploreNeighbours();
+        PathFind();
+        //ExploreNeighbours();
+    }
+
+    private void PathFind()
+    {
+        queue.Enqueue(startWaypoint);
+
+        while(queue.Count > 0)
+        {
+            Waypoint searchCenter = queue.Dequeue();
+            print(searchCenter);
+
+            HaltIfEndFound(searchCenter);
+        }
+
+        Print("Finish pathfinding?");
+    }
+
+    private void HaltIfEndFound(Waypoint searchCenter)
+    {
+        if (searchCenter == endWaypoint)
+        {
+            print("Searching from end node, therefore stopping");
+            isRunning = false;
+        }
     }
 
     private void ExploreNeighbours()
