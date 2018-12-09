@@ -243,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4ebe99b7b2d45c5aaf0c442c322db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 12988870}
+  endWaypoint: {fileID: 809758453}
 --- !u!114 &376787572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114013740532077180, guid: 9423ab9855577474c9f78d1256718fd4,
@@ -468,6 +470,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 748702242}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &809758453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114013740532077180, guid: 9423ab9855577474c9f78d1256718fd4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1932799277}
+  m_Script: {fileID: 11500000, guid: 7f62ee1f4a3f24747941303cdbf968ba, type: 3}
 --- !u!1001 &849146240
 Prefab:
   m_ObjectHideFlags: 0
@@ -678,11 +686,6 @@ Prefab:
     - target: {fileID: 1395050453795974, guid: 9423ab9855577474c9f78d1256718fd4, type: 2}
       propertyPath: m_Name
       value: 0,0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114438959063094000, guid: 9423ab9855577474c9f78d1256718fd4,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9423ab9855577474c9f78d1256718fd4, type: 2}
