@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour {
 
     [SerializeField] Collider collisionMesh;
+    [SerializeField] int hitPoints = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +15,22 @@ public class EnemyDamage : MonoBehaviour {
 
     private void OnParticleCollision(GameObject other)
     {
-        print("I'm hit!");
+        ProcessHit();
+
+        if (hitPoints <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void KillEnemy()
+    {
+        Destroy(gameObject);
+    }
+
+    void ProcessHit()
+    {
+        hitPoints -= 1;
+        print("current hitpoints are: " + hitPoints);
     }
 }
