@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour {
 
@@ -8,8 +9,12 @@ public class EnemySpawner : MonoBehaviour {
     [SerializeField] float secondsBetweenSpanws = 2f;
     [SerializeField] EnemyMovement enemyPrefab;
     [SerializeField] Transform enemyParentTransform;
+    [SerializeField] Text spawnedEnemies;
+
+    int score = 0;
 
     void Start () {
+        spawnedEnemies.text = score.ToString();
         StartCoroutine(SpawnEnemies());
     }
 
@@ -18,6 +23,11 @@ public class EnemySpawner : MonoBehaviour {
         while (true)
         {
             Instantiate(enemyPrefab, transform.position, Quaternion.identity, enemyParentTransform);
+
+            score++;
+            spawnedEnemies.text = score.ToString();
+
+
             yield return new WaitForSeconds(secondsBetweenSpanws);
         }
     }
