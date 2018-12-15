@@ -31,6 +31,5 @@ public class EnemyDamage : MonoBehaviour {
     void ProcessHit()
     {
         hitPoints -= 1;
-        print("current hitpoints are: " + hitPoints);
     }
 }
