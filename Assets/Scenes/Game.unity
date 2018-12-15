@@ -2563,6 +2563,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -2599,7 +2600,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 46
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2623,13 +2624,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.29205015, y: 0.012910521, z: -0.003945621, w: 0.9563077}
-  m_LocalPosition: {x: 24.258999, y: 72.59673, z: -94.389755}
+  m_LocalRotation: {x: 0.4871663, y: -0.0000042418974, z: 0.000007604155, w: 0.87330925}
+  m_LocalPosition: {x: 53.818, y: 69.4836, z: -48.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 58.309, y: 0, z: 0.001}
 --- !u!45 &534669906
 Skybox:
   m_ObjectHideFlags: 0
@@ -2638,6 +2639,18 @@ Skybox:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: f3f55bd8596c94ad0abf64e1eb8bd144, type: 2}
 --- !u!1001 &544278593
 Prefab:
   m_ObjectHideFlags: 0
@@ -7374,13 +7387,13 @@ Transform:
   - {fileID: 435214635}
   - {fileID: 407024726}
   - {fileID: 1167732054}
+  - {fileID: 865113676}
   - {fileID: 14954429}
   - {fileID: 1901993403}
   - {fileID: 2019863592}
   - {fileID: 1341213021}
   - {fileID: 1551218635}
   - {fileID: 1457257741}
-  - {fileID: 865113676}
   - {fileID: 369140459}
   - {fileID: 390315242}
   - {fileID: 1848734711}
@@ -7396,20 +7409,20 @@ Transform:
   - {fileID: 861399354}
   - {fileID: 2094640580}
   - {fileID: 164804426}
-  - {fileID: 1498595964}
   - {fileID: 428251276}
-  - {fileID: 2005949894}
   - {fileID: 822360091}
   - {fileID: 561790240}
   - {fileID: 557966754}
+  - {fileID: 2005949894}
   - {fileID: 72896863}
+  - {fileID: 1498595964}
   - {fileID: 123920724}
   - {fileID: 913754472}
-  - {fileID: 2063333613}
   - {fileID: 1161728866}
-  - {fileID: 838224361}
   - {fileID: 225982268}
+  - {fileID: 838224361}
   - {fileID: 713828684}
+  - {fileID: 2063333613}
   - {fileID: 130969153}
   - {fileID: 1255164879}
   - {fileID: 122949882}
@@ -7628,7 +7641,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 114263493586912850, guid: 91fcbeea9a0cb4571938df8cfcd73b34,
     type: 2}
   enemyParentTransform: {fileID: 1953044373}
-  scoreText: {fileID: 1041022706}
+  spawnedEnemies: {fileID: 1041022706}
 --- !u!1001 &1983982866
 Prefab:
   m_ObjectHideFlags: 0
