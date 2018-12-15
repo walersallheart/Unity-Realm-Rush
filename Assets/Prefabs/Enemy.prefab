@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMesh: {fileID: 65399706986507106}
-  hitPoints: 5
+  hitPoints: 2
   hitParticlePrefab: {fileID: 198713822671109850}
   deathParticlePrefab: {fileID: 198211077495565804}
   enemyHitSFX: {fileID: 8300000, guid: 82aae0bc7a49941bea5a4b64694d4142, type: 3}
