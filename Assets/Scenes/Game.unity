@@ -1920,6 +1920,11 @@ Prefab:
       propertyPath: m_Name
       value: 0,0
       objectReference: {fileID: 0}
+    - target: {fileID: 102129484638564916, guid: 9423ab9855577474c9f78d1256718fd4,
+        type: 2}
+      propertyPath: m_Text
+      value: 0,0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9423ab9855577474c9f78d1256718fd4, type: 2}
   m_IsPrefabAsset: 0
@@ -2706,6 +2711,11 @@ Prefab:
       propertyPath: m_Name
       value: Tower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114372635073998120, guid: 7fd0b0dcffc8c4c2996c8b56cd845cb4,
+        type: 2}
+      propertyPath: attackRange
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd0b0dcffc8c4c2996c8b56cd845cb4, type: 2}
   m_IsPrefabAsset: 0
@@ -2930,6 +2940,11 @@ Prefab:
       propertyPath: m_Name
       value: Tower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114372635073998120, guid: 7fd0b0dcffc8c4c2996c8b56cd845cb4,
+        type: 2}
+      propertyPath: attackRange
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd0b0dcffc8c4c2996c8b56cd845cb4, type: 2}
   m_IsPrefabAsset: 0
@@ -3091,10 +3106,10 @@ Prefab:
       propertyPath: m_Name
       value: 3,0
       objectReference: {fileID: 0}
-    - target: {fileID: 102129484638564916, guid: 9423ab9855577474c9f78d1256718fd4,
+    - target: {fileID: 65158074466148612, guid: 9423ab9855577474c9f78d1256718fd4,
         type: 2}
-      propertyPath: m_Text
-      value: 3,0
+      propertyPath: m_Center.y
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9423ab9855577474c9f78d1256718fd4, type: 2}

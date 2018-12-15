@@ -13,19 +13,6 @@ public class Waypoint : MonoBehaviour {
 
     public Waypoint exploredFrom;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (isExplored)
-        {
-            SetTopColor(exploredColor);
-        }
-    }
-
     public int GetGridSize()
     {
         return gridSize;
@@ -39,10 +26,8 @@ public class Waypoint : MonoBehaviour {
         );
     }
 
-    public void SetTopColor(Color color)
+    void OnMouseOver()
     {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-
-        topMeshRenderer.material.color = color;
+        print(gameObject.name);
     }
 }
