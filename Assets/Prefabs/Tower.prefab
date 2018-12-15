@@ -231,6 +231,7 @@ MonoBehaviour:
   objectToPan: {fileID: 4284992893679680}
   attackRange: 30
   projectileParticle: {fileID: 198050390537752744}
+  baseWaypoint: {fileID: 0}
 --- !u!198 &198050390537752744
 ParticleSystem:
   m_ObjectHideFlags: 1

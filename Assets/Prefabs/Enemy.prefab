@@ -433,7 +433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186a270383fe34011bc1a5b0648c3148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dwellTime: 2
+  movementPeriod: 0.5
+  goalParticle: {fileID: 198537984209914932, guid: c7b8446fb7cf94313b2fde714def6616,
+    type: 2}
 --- !u!114 &114831764393695160
 MonoBehaviour:
   m_ObjectHideFlags: 1
