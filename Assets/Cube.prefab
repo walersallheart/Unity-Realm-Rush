@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395050453795974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 50, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4642869208083108}
@@ -288,7 +288,7 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603714466916090}
-  m_Text: 3,0
+  m_Text: 5,-1
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
@@ -313,9 +313,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f62ee1f4a3f24747941303cdbf968ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exploredColor: {r: 0, g: 0, b: 1, a: 1}
+  towerPrefab: {fileID: 114372635073998120, guid: 7fd0b0dcffc8c4c2996c8b56cd845cb4,
+    type: 2}
   isExplored: 0
   exploredFrom: {fileID: 0}
+  isPlaceable: 1
 --- !u!114 &114438959063094000
 MonoBehaviour:
   m_ObjectHideFlags: 1
