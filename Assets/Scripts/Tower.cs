@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tower : MonoBehaviour {
-
+    //Parameters of Tower
     [SerializeField] Transform objectToPan;
-    [SerializeField] Transform targetEnemy;
     [SerializeField] float attackRange = 10f;
     [SerializeField] ParticleSystem projectileParticle;
+
+    //State of Tower
+    Transform targetEnemy;
 
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
@@ -17,12 +19,47 @@ public class Tower : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        SetTargetEnemy();
+
         if (targetEnemy){
             objectToPan.LookAt(targetEnemy);
             FireAtEnemy();
         } else {
             Shoot(false);
         }
+    }
+
+    private void SetTargetEnemy()
+    {
+        var sceneEnemies = FindObjectsOfType<EnemyDamage>();
+
+        if (sceneEnemies.Length == 0) {
+            targetEnemy = null;
+            return;
+        }
+
+        Transform closestEnemy = sceneEnemies[0].transform;
+
+        foreach (EnemyDamage testEnemy in sceneEnemies)
+        {
+            closestEnemy = GetClosest(closestEnemy, testEnemy.transform);
+        }
+
+        targetEnemy = closestEnemy;
+
+    }
+
+    private Transform GetClosest(Transform transformA, Transform transformB)
+    {
+        float distToA = Vector3.Distance(transformA.position, gameObject.transform.position);
+        float distToB = Vector3.Distance(transformB.position, gameObject.transform.position);
+
+        if (distToA < distToB)
+        {
+            return transformA;
+        }
+
+        return transformB;
     }
 
     private void FireAtEnemy(){
