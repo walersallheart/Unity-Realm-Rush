@@ -6,6 +6,7 @@ using UnityEngine;
 public class TowerFactory : MonoBehaviour {
     [SerializeField] int towerLimit = 5;
     [SerializeField] Tower towerPrefab;
+    [SerializeField] Transform towerParentTransform;
 
     Queue<Tower> towers = new Queue<Tower>();
 
@@ -36,7 +37,7 @@ public class TowerFactory : MonoBehaviour {
 
     private void InstantiateNewTower(Waypoint baseWaypoint)
     {
-        var newTower = Instantiate(towerPrefab, baseWaypoint.transform.position, Quaternion.identity);
+        var newTower = Instantiate(towerPrefab, baseWaypoint.transform.position, Quaternion.identity, towerParentTransform);
         towers.Enqueue(newTower);
 
         newTower.baseWaypoint = baseWaypoint;

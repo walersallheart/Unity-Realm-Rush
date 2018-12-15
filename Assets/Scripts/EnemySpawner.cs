@@ -7,8 +7,9 @@ public class EnemySpawner : MonoBehaviour {
     [Range(0.1f, 10f)]
     [SerializeField] float secondsBetweenSpanws = 2f;
     [SerializeField] EnemyMovement enemyPrefab;
+    [SerializeField] Transform enemyParentTransform;
 
-	void Start () {
+    void Start () {
         StartCoroutine(SpawnEnemies());
     }
 
@@ -16,7 +17,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         while (true)
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity, gameObject.transform);
+            Instantiate(enemyPrefab, transform.position, Quaternion.identity, enemyParentTransform);
             yield return new WaitForSeconds(secondsBetweenSpanws);
         }
     }

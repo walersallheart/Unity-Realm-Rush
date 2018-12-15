@@ -30,6 +30,7 @@ public class EnemyDamage : MonoBehaviour {
         ParticleSystem vFX = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
         vFX.Play();
 
+        Destroy(vFX.gameObject,vFX.main.duration);
         Destroy(gameObject);
     }
 
