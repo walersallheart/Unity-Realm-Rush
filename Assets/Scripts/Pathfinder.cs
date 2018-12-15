@@ -41,17 +41,24 @@ public class Pathfinder : MonoBehaviour {
 
     private void CreatePath()
     {
-        path.Add(endWaypoint);
+        SetAsPath(endWaypoint); //prevent the player from dropping a tower on the goal
 
         Waypoint previous = endWaypoint.exploredFrom;
 
         while(previous != startWaypoint)
         {
-            path.Add(previous);
+            SetAsPath(previous);
             previous = previous.exploredFrom;
         }
 
+        SetAsPath(startWaypoint);
         path.Reverse();
+    }
+
+    private void SetAsPath(Waypoint waypoint)
+    {
+        path.Add(waypoint);
+        waypoint.isPlaceable = false; //prevent the player from dropping a tower on the goal
     }
 
     private void BreadthFirstSearch()
